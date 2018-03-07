@@ -263,7 +263,7 @@
 											<div class="row">											
 												<div class="col-md-3">
 													<label for="DataCadastroCliente">Cadastrado em:</label>													
-													<input type="text" class="form-control Date"  maxlength="10" <?php echo $readonly; ?>
+													<input type="text" class="form-control Date"  maxlength="10" readonly="" <?php echo $readonly; ?>
 														   name="DataCadastroCliente" placeholder="DD/MM/AAAA" value="<?php echo $query['DataCadastroCliente']; ?>">													
 												</div>
 												<div class="col-md-3">

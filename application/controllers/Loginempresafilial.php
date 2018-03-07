@@ -36,7 +36,7 @@ class Loginempresafilial extends CI_Controller {
     public function index() {
 
         #$_SESSION['log']['cliente'] = $_SESSION['log']['nome_modulo'] =
-        $_SESSION['log']['nome_modulo'] = $_SESSION['log']['modulo'] = $data['modulo'] = $data['nome_modulo'] = 'ktraca';
+        $_SESSION['log']['nome_modulo'] = $_SESSION['log']['modulo'] = $data['modulo'] = $data['nome_modulo'] = 'varejo';
         $_SESSION['log']['idTab_Modulo'] = 1;
 
         ###################################################
@@ -143,7 +143,7 @@ class Loginempresafilial extends CI_Controller {
 
     public function registrar() {
 
-        $_SESSION['log']['nome_modulo'] = $_SESSION['log']['modulo'] = $data['modulo'] = $data['nome_modulo'] = 'ktraca';
+        $_SESSION['log']['nome_modulo'] = $_SESSION['log']['modulo'] = $data['modulo'] = $data['nome_modulo'] = 'varejo';
         $_SESSION['log']['idTab_Modulo'] = 1;
 
         if ($this->input->get('m') == 1)
@@ -187,7 +187,7 @@ class Loginempresafilial extends CI_Controller {
         } else {
 			
 			$data['query']['Empresa'] = 0;
-			$data['query']['idSis_EmpresaMatriz'] = 1;
+			$data['query']['idSis_EmpresaMatriz'] = 2;
 			$data['query']['Associado'] = 33;
 			$data['query']['idTab_Modulo'] = $_SESSION['log']['idTab_Modulo'];
             $data['query']['DataCriacao'] = $this->basico->mascara_data($data['query']['DataCriacao'], 'mysql');
@@ -263,7 +263,7 @@ class Loginempresafilial extends CI_Controller {
 
     public function confirmar($codigo) {
 
-        $_SESSION['log']['nome_modulo'] = $_SESSION['log']['modulo'] = $data['modulo'] = $data['nome_modulo'] = 'ktraca';
+        $_SESSION['log']['nome_modulo'] = $_SESSION['log']['modulo'] = $data['modulo'] = $data['nome_modulo'] = 'varejo';
         $_SESSION['log']['idTab_Modulo'] = 1;
 
 
@@ -295,7 +295,7 @@ class Loginempresafilial extends CI_Controller {
 
     public function recuperar() {
 
-        $_SESSION['log']['nome_modulo'] = $_SESSION['log']['modulo'] = $data['modulo'] = $data['nome_modulo'] = 'ktraca';
+        $_SESSION['log']['nome_modulo'] = $_SESSION['log']['modulo'] = $data['modulo'] = $data['nome_modulo'] = 'varejo';
         $_SESSION['log']['idTab_Modulo'] = 1;
 
         if ($this->input->get('m') == 1)
@@ -375,7 +375,7 @@ class Loginempresafilial extends CI_Controller {
 
     public function trocar_senha($codigo = NULL) {
 
-        $_SESSION['log']['nome_modulo'] = $_SESSION['log']['modulo'] = $data['modulo'] = $data['nome_modulo'] = 'ktraca';
+        $_SESSION['log']['nome_modulo'] = $_SESSION['log']['modulo'] = $data['modulo'] = $data['nome_modulo'] = 'varejo';
         $_SESSION['log']['idTab_Modulo'] = 1;
 
         if ($this->input->get('m') == 1)

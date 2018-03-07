@@ -13,7 +13,7 @@ class Relatorioempresa extends CI_Controller {
         $this->load->helper(array('form', 'url', 'date', 'string'));
         #$this->load->library(array('basico', 'Basico_model', 'form_validation'));
         $this->load->library(array('basico', 'form_validation'));
-        $this->load->model(array('Basico_model', 'Profissional_model', 'Cliente_model', 'Relatorio_model'));
+        $this->load->model(array('Basico_model', 'Profissional_model', 'Cliente_model', 'Relatorioempresa_model'));
         $this->load->driver('session');
 
         #load header view
@@ -117,7 +117,7 @@ class Relatorioempresa extends CI_Controller {
             'DESC' => 'Decrescente',
         );
 
-        $data['select']['Nome'] = $this->Relatorio_model->select_funcionario();
+        $data['select']['Nome'] = $this->Relatorioempresa_model->select_funcionario();
 
         $data['titulo'] = 'Relatório de Usuários';
 
@@ -128,7 +128,7 @@ class Relatorioempresa extends CI_Controller {
             $data['bd']['Ordenamento'] = $data['query']['Ordenamento'];
             $data['bd']['Campo'] = $data['query']['Campo'];
 
-            $data['report'] = $this->Relatorio_model->list_funcionario($data['bd'],TRUE);
+            $data['report'] = $this->Relatorioempresa_model->list_funcionario($data['bd'],TRUE);
 
             /*
               echo "<pre>";

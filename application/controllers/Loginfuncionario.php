@@ -36,7 +36,7 @@ class Loginfuncionario extends CI_Controller {
     public function index() {
 
         #$_SESSION['log']['cliente'] = $_SESSION['log']['nome_modulo'] =
-        $_SESSION['log']['nome_modulo'] = $_SESSION['log']['modulo'] = $data['modulo'] = $data['nome_modulo'] = 'ktraca';
+        $_SESSION['log']['nome_modulo'] = $_SESSION['log']['modulo'] = $data['modulo'] = $data['nome_modulo'] = 'varejo';
         $_SESSION['log']['idTab_Modulo'] = 1;
 
         ###################################################
@@ -140,7 +140,7 @@ class Loginfuncionario extends CI_Controller {
 
     public function registrar() {
 
-        $_SESSION['log']['nome_modulo'] = $_SESSION['log']['modulo'] = $data['modulo'] = $data['nome_modulo'] = 'ktraca';
+        $_SESSION['log']['nome_modulo'] = $_SESSION['log']['modulo'] = $data['modulo'] = $data['nome_modulo'] = 'varejo';
         $_SESSION['log']['idTab_Modulo'] = 1;
 
         if ($this->input->get('m') == 1)
@@ -164,6 +164,16 @@ class Loginfuncionario extends CI_Controller {
 			'Funcao',
 			'TipoProfissional',
 			'DataCriacao',
+			'CpfUsuario',
+			'RgUsuario',
+			'OrgaoExpUsuario',
+			'EstadoEmUsuario',
+			'DataEmUsuario',
+			'EnderecoUsuario',
+			'BairroUsuario',
+			'MunicipioUsuario',
+			'CepUsuario',
+			
 			
                 ), TRUE);
 
@@ -178,13 +188,14 @@ class Loginfuncionario extends CI_Controller {
         $this->form_validation->set_rules('Confirma', 'Confirmar Senha', 'required|trim|matches[Senha]');
         $this->form_validation->set_rules('DataNascimento', 'Data de Nascimento', 'trim|valid_date');
 		$this->form_validation->set_rules('Celular', 'Celular', 'required|trim');
-		$this->form_validation->set_rules('Permissao', 'Nível', 'required|trim');
-		$this->form_validation->set_rules('Funcao', 'Funcao', 'required|trim');
+		#$this->form_validation->set_rules('Permissao', 'Nível', 'required|trim');
+		#$this->form_validation->set_rules('Funcao', 'Funcao', 'required|trim');
 		
 		$data['select']['Permissao'] = $this->Basico_model->select_permissao();
 		$data['select']['TipoProfissional'] = $this->Basico_model->select_tipoprofissional();
 		$data['select']['Funcao'] = $this->Funcao_model->select_funcao();
-        $data['select']['Sexo'] = $this->Basico_model->select_sexo();
+        $data['select']['MunicipioUsuario'] = $this->Basico_model->select_municipio();
+		$data['select']['Sexo'] = $this->Basico_model->select_sexo();
 
         #run form validation
         if ($this->form_validation->run() === FALSE) {
@@ -192,12 +203,15 @@ class Loginfuncionario extends CI_Controller {
             $this->load->view('loginfuncionario/form_registrar', $data);
         } else {
 			
-			$data['query']['idSis_EmpresaFilial'] = $_SESSION['log']['idSis_EmpresaFilial'];
-			$data['query']['Empresa'] = $_SESSION['log']['idSis_EmpresaFilial'];
-			$data['query']['NomeEmpresa'] = $_SESSION['log']['NomeEmpresa'];
-			$data['query']['idTab_Modulo'] = $_SESSION['log']['idTab_Modulo'];
+			$data['query']['idSis_EmpresaFilial'] = 2;
+			$data['query']['Funcao'] = 1;
+			$data['query']['Permissao'] = 3;
+			$data['query']['Empresa'] = 2;
+			$data['query']['NomeEmpresa'] = 'Rede Calisi de Vendas';
+			$data['query']['idTab_Modulo'] = 1;
             $data['query']['Senha'] = md5($data['query']['Senha']);
 			$data['query']['DataNascimento'] = $this->basico->mascara_data($data['query']['DataNascimento'], 'mysql');
+			$data['query']['DataEmUsuario'] = $this->basico->mascara_data($data['query']['DataEmUsuario'], 'mysql');
             $data['query']['DataCriacao'] = $this->basico->mascara_data($data['query']['DataCriacao'], 'mysql');
 			$data['query']['Codigo'] = md5(uniqid(time() . rand()));
             #$data['query']['Inativo'] = 1;
@@ -227,7 +241,7 @@ class Loginfuncionario extends CI_Controller {
                  */
                 $data['agenda'] = array(
                     'NomeAgenda' => 'Padrão',
-					'Empresa' => $_SESSION['log']['idSis_EmpresaFilial'],
+					'Empresa' => '2',
                     'idSis_Usuario' => $data['idSis_Usuario']
                 );
                 $data['campos'] = array_keys($data['agenda']);
@@ -289,7 +303,7 @@ class Loginfuncionario extends CI_Controller {
 
     public function confirmar($codigo) {
 
-        $_SESSION['log']['nome_modulo'] = $_SESSION['log']['modulo'] = $data['modulo'] = $data['nome_modulo'] = 'ktraca';
+        $_SESSION['log']['nome_modulo'] = $_SESSION['log']['modulo'] = $data['modulo'] = $data['nome_modulo'] = 'varejo';
         $_SESSION['log']['idTab_Modulo'] = 1;
 
 
@@ -321,7 +335,7 @@ class Loginfuncionario extends CI_Controller {
 
     public function recuperar() {
 
-        $_SESSION['log']['nome_modulo'] = $_SESSION['log']['modulo'] = $data['modulo'] = $data['nome_modulo'] = 'ktraca';
+        $_SESSION['log']['nome_modulo'] = $_SESSION['log']['modulo'] = $data['modulo'] = $data['nome_modulo'] = 'varejo';
         $_SESSION['log']['idTab_Modulo'] = 1;
 
         if ($this->input->get('m') == 1)
@@ -401,7 +415,7 @@ class Loginfuncionario extends CI_Controller {
 
     public function trocar_senha($codigo = NULL) {
 
-        $_SESSION['log']['nome_modulo'] = $_SESSION['log']['modulo'] = $data['modulo'] = $data['nome_modulo'] = 'ktraca';
+        $_SESSION['log']['nome_modulo'] = $_SESSION['log']['modulo'] = $data['modulo'] = $data['nome_modulo'] = 'varejo';
         $_SESSION['log']['idTab_Modulo'] = 1;
 
         if ($this->input->get('m') == 1)
