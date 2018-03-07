@@ -212,9 +212,9 @@
 														   name="OrgaoExp" value="<?php echo $query['OrgaoExp']; ?>">
 												</div>
 												<div class="col-md-3">
-													<label for="Estado">Estado Emissor:</label>
+													<label for="EstadoExp">Estado Emissor:</label>
 													<input type="text" class="form-control" maxlength="2" <?php echo $readonly; ?>
-														   name="Estado" value="<?php echo $query['Estado']; ?>">
+														   name="EstadoExp" value="<?php echo $query['EstadoExp']; ?>">
 												</div>
 												<div class="col-md-3">
 													<label for="DataEmissao">Data de Emissão:</label>
@@ -237,24 +237,18 @@
 														   name="Bairro" value="<?php echo $query['Bairro']; ?>">
 												</div>
 												<div class="col-md-3">
-													<label for="Municipio">Município:</label><br>
-													<select data-placeholder="Selecione um Município..." class="form-control" <?php echo $disabled; ?>
-															id="Municipio" name="Municipio">
-														<option value="">-- Selec.um Município --</option>
-														<?php
-														foreach ($select['Municipio'] as $key => $row) {
-															if ($query['Municipio'] == $key) {
-																echo '<option value="' . $key . '" selected="selected">' . $row . '</option>';
-															} else {
-																echo '<option value="' . $key . '">' . $row . '</option>';
-															}
-														}
-														?>
-													</select>
+													<label for="Municipio">Municipio:</label>
+													<input type="text" class="form-control" maxlength="100" <?php echo $readonly; ?>
+														   name="Municipio" value="<?php echo $query['Municipio']; ?>">
+												</div>												
+												<div class="col-md-1">
+													<label for="Estado">Estado:</label>
+													<input type="text" class="form-control" id="Estado" maxlength="2" <?php echo $readonly; ?>
+														   name="Estado" value="<?php echo $query['Estado']; ?>">
 												</div>
-												<div class="col-md-3">
+												<div class="col-md-2">
 													<label for="Cep">Cep:</label>
-													<input type="text" class="form-control" maxlength="8" <?php echo $readonly; ?>
+													<input type="text" class="form-control" id="Cep" maxlength="8" <?php echo $readonly; ?>
 														   name="Cep" value="<?php echo $query['Cep']; ?>">
 												</div>
 											</div>

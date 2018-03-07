@@ -172,6 +172,7 @@ class Loginfuncionario extends CI_Controller {
 			'EnderecoUsuario',
 			'BairroUsuario',
 			'MunicipioUsuario',
+			'EstadoUsuario',
 			'CepUsuario',
 			
 			

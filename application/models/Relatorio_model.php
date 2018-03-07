@@ -3207,14 +3207,13 @@ exit();*/
                 C.Telefone3,
                 C.Sexo,
                 C.Endereco,
-                C.Bairro,
-                CONCAT(M.NomeMunicipio, "/", M.Uf) AS Municipio,
+                C.Bairro,				
+                C.Municipio,
+				C.Estado,
                 C.Email
 
             FROM
 				App_Cliente AS C
-                    LEFT JOIN Tab_Municipio AS M ON C.Municipio = M.idTab_Municipio
-
             WHERE
                 C.idTab_Modulo = ' . $_SESSION['log']['idTab_Modulo'] . ' AND
 				C.Empresa = ' . $_SESSION['log']['Empresa'] . ' AND

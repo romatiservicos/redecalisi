@@ -152,14 +152,20 @@
 	<?php echo form_error('BairroUsuario'); ?>
 	<br>
 	
-	<!--
+	
 	<label for="MunicipioUsuario">Municipio:</label>
-	<input type="text" class="form-control" id="MunicipioUsuario" maxlength="2"
+	<input type="text" class="form-control" id="MunicipioUsuario" maxlength="100"
 		   name="MunicipioUsuario" value="<?php echo $query['MunicipioUsuario']; ?>">
 	<?php echo form_error('MunicipioUsuario'); ?>
 	<br>
-	-->
 	
+	<label for="EstadoUsuario">Estado:</label>
+	<input type="text" class="form-control" id="EstadoUsuario" maxlength="2"
+		   name="EstadoUsuario" value="<?php echo $query['EstadoUsuario']; ?>">
+	<?php echo form_error('EstadoUsuario'); ?>
+	<br>
+	
+	<!--
 	<label for="MunicipioUsuario">Município:</label>
 	<select data-placeholder="Selecione um Município..." class="form-control" <?php echo $disabled; ?>
 			id="MunicipioUsuario" name="MunicipioUsuario">
@@ -176,7 +182,7 @@
 	</select>				
 	<?php echo form_error('Municipio'); ?>
 	<br>
-	
+	-->
 	<label for="CepUsuario">Cep:</label>
 	<input type="text" class="form-control" id="CepUsuario" maxlength="8"
 		   name="CepUsuario" value="<?php echo $query['CepUsuario']; ?>">
