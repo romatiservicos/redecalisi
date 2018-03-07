@@ -152,6 +152,7 @@ class Tipodespesa_model extends CI_Model {
 					TD.idTab_TipoDespesa, 
 					CONCAT(CD.Abrevcategoriadesp, " " , "--" , " " , TD.TipoDespesa) AS TipoDespesa,
 					CD.Categoriadesp,
+					CD.idTab_Categoriadesp,
 					CD.Abrevcategoriadesp
 				FROM 
 					Tab_TipoDespesa AS TD
@@ -160,7 +161,7 @@ class Tipodespesa_model extends CI_Model {
 					TD.Empresa = ' . $_SESSION['log']['Empresa'] . ' AND 
 					TD.idTab_Modulo = ' . $_SESSION['log']['idTab_Modulo'] . '
 				ORDER BY
-					CD.Abrevcategoriadesp,
+					CD.idTab_Categoriadesp,
 					TD.TipoDespesa
 				');
 				   
@@ -171,6 +172,7 @@ class Tipodespesa_model extends CI_Model {
 					TD.idTab_TipoDespesa, 
 					CONCAT(CD.Abrevcategoriadesp, " " , "--" , " " , TD.TipoDespesa) AS TipoDespesa,
 					CD.Categoriadesp,
+					CD.idTab_Categoriadesp,
 					CD.Abrevcategoriadesp
 				FROM 
 					Tab_TipoDespesa AS TD
@@ -179,7 +181,7 @@ class Tipodespesa_model extends CI_Model {
 					TD.Empresa = ' . $_SESSION['log']['Empresa'] . ' AND 
 					TD.idTab_Modulo = ' . $_SESSION['log']['idTab_Modulo'] . '
 				ORDER BY
-					CD.Abrevcategoriadesp,
+					CD.idTab_Categoriadesp,
 					TD.TipoDespesa
 				');
 

@@ -382,12 +382,7 @@
 										<div class="form-group">
 											<div class="panel panel-danger">
 												<div class="panel-heading">
-													<div class="row">
-														<div class="col-md-3">
-															<label for="QtdParcelasOrca">Qtd. Parc.:</label><br>
-															<input type="text" class="form-control Numero" id="QtdParcelasOrca" maxlength="3" placeholder="0"
-																   name="QtdParcelasOrca" value="<?php echo $orcatrata['QtdParcelasOrca'] ?>">
-														</div>
+													<div class="row">														
 														<div class="col-md-3">
 															<label for="FormaPagamento">Forma de Pagam.:</label>
 															<select data-placeholder="Selecione uma opção..." class="form-control" <?php echo $readonly; ?>
@@ -403,6 +398,11 @@
 																}
 																?>
 															</select>
+														</div>
+														<div class="col-md-3">
+															<label for="QtdParcelasOrca">Qtd. Parc.:</label><br>
+															<input type="text" class="form-control Numero" id="QtdParcelasOrca" maxlength="3" placeholder="0"
+																   name="QtdParcelasOrca" value="<?php echo $orcatrata['QtdParcelasOrca'] ?>">
 														</div>
 														<div class="col-md-3">
 															<label for="DataVencimentoOrca">1º Venc.</label>

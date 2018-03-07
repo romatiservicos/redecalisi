@@ -284,7 +284,7 @@
 																	onkeyup="calculaSubtotalCompra(this.value,this.name,'<?php echo $i ?>','QTD','Produto')"
 																	autofocus name="QtdCompraProduto<?php echo $i ?>" value="<?php echo $produto[$i]['QtdCompraProduto'] ?>">
 														</div>
-														<div class="col-md-4">
+														<div class="col-md-7">
 															<label for="idTab_Produto">Produto:</label>
 															<?php if ($i == 1) { ?>
 															<!--<a class="btn btn-xs btn-info" href="<?php echo base_url() ?>produtos/cadastrar" role="button">
@@ -323,6 +323,14 @@
 																	   name="SubtotalProduto<?php echo $i ?>" value="<?php echo $produto[$i]['SubtotalProduto'] ?>">
 															</div>
 														</div>
+													</div>
+													<div class="row">
+														<div class="col-md-1"></div>
+														<div class="col-md-7">
+															<label for="ObsProduto<?php echo $i ?>">Obs:</label><br>
+															<input type="text" class="form-control" id="ObsProduto<?php echo $i ?>" maxlength="250"
+																   name="ObsProduto<?php echo $i ?>" value="<?php echo $produto[$i]['ObsProduto'] ?>">
+														</div>
 														<div class="col-md-2">
 															<label for="DataValidadeProduto<?php echo $i ?>">Val. do Produto:</label>
 															<div class="input-group <?php echo $datepicker; ?>">
@@ -332,7 +340,7 @@
 																	<span class="glyphicon glyphicon-calendar"></span>
 																</span>
 															</div>
-														</div>
+														</div>														
 														<div class="col-md-1">
 															<label><br></label><br>
 															<button type="button" id="<?php echo $i ?>" class="remove_field6 btn btn-danger">
@@ -417,12 +425,7 @@
 										<div class="form-group">
 											<div class="panel panel-danger">
 												<div class="panel-heading">
-													<div class="row">
-														<div class="col-md-3">
-															<label for="QtdParcelasDespesas">Qtd. Parc.:</label><br>
-															<input type="text" class="form-control Numero" id="QtdParcelasDespesas" maxlength="3" placeholder="0"
-																   name="QtdParcelasDespesas" value="<?php echo $despesas['QtdParcelasDespesas'] ?>">
-														</div>
+													<div class="row">														
 														<div class="col-md-3">
 															<label for="FormaPagamentoDespesas">Forma de Pagamento:</label>
 															<select data-placeholder="Selecione uma opção..." class="form-control" <?php echo $readonly; ?>
@@ -438,7 +441,12 @@
 																}
 																?>
 															</select>
-														</div>															
+														</div>
+														<div class="col-md-3">
+															<label for="QtdParcelasDespesas">Qtd. Parc.:</label><br>
+															<input type="text" class="form-control Numero" id="QtdParcelasDespesas" maxlength="3" placeholder="0"
+																   name="QtdParcelasDespesas" value="<?php echo $despesas['QtdParcelasDespesas'] ?>">
+														</div>
 														<div class="col-md-3">
 															<label for="DataVencimentoDespesas">Data do 1º Venc.</label>
 															<div class="input-group <?php echo $datepicker; ?>">
@@ -579,6 +587,8 @@
 								</div>
 							</div>
 						</div>
+						
+						
 						<div class="panel-group" id="accordion8" role="tablist" aria-multiselectable="true">
 							<div class="panel panel-primary">
 								<div class="panel-heading collapsed" role="tab" id="heading8" data-toggle="collapse" data-parent="#accordion8" data-target="#collapse8" aria-expanded="false">								<h4 class="panel-title">
