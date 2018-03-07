@@ -41,7 +41,7 @@
 									<div class="row">
 										<button type="button" id="AgendarEvento" onclick="redirecionar2(3)" class="btn btn-danger">Evento Particular
 										</button>
-
+									
 										<input type="hidden" id="start" />
 										<input type="hidden" id="end" />
 									</div>

@@ -55,6 +55,7 @@ $result = mysql_query(
 
         WHERE
 			C.idTab_Modulo = ' . $_SESSION['log']['idTab_Modulo'] . ' AND
+			C.idSis_Usuario = ' . $_SESSION['log']['id'] . ' AND
            	C.Empresa = ' . $_SESSION['log']['Empresa'] . ' AND
 			' . $query . '
             ' . $permissao . '

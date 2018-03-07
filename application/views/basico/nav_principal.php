@@ -140,15 +140,15 @@
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="<?php echo base_url() ?>relatorio/orcamento"><span class="glyphicon glyphicon-list"></span> Orçamentos</a></li>
 							<li role="separator" class="divider"></li>
-							<li><a href="<?php echo base_url() ?>relatorio/produtosvend"><span class="glyphicon glyphicon-list"></span> Orç. X Cl. X Prd.</a></li>
+							<li><a href="<?php echo base_url() ?>relatorio/receitas"><span class="glyphicon glyphicon-list"></span> Orç. X Cl. X Pag.</a></li>							
 							<li role="separator" class="divider"></li>
-							<li><a href="<?php echo base_url() ?>relatorio/receitas"><span class="glyphicon glyphicon-list"></span> Orç. X Cl. X Pag.</a></li>
+							<li><a href="<?php echo base_url() ?>relatorio/produtosvend"><span class="glyphicon glyphicon-list"></span> Orç. X Cl. X Prd.</a></li>
 							<li role="separator" class="divider"></li>
 							<li><a href="<?php echo base_url() ?>relatorio/despesas"><span class="glyphicon glyphicon-list"></span> Despesas</a></li>
 							<li role="separator" class="divider"></li>
-							<li><a href="<?php echo base_url() ?>relatorio/produtoscomp"><span class="glyphicon glyphicon-list"></span> Despesas X Prd.</a></li>
+							<li><a href="<?php echo base_url() ?>relatorio/despesaspag"><span class="glyphicon glyphicon-list"></span> Despesas X Pag.</a></li>							
 							<li role="separator" class="divider"></li>
-							<li><a href="<?php echo base_url() ?>relatorio/despesaspag"><span class="glyphicon glyphicon-list"></span> Despesas X Pag.</a></li>
+							<li><a href="<?php echo base_url() ?>relatorio/produtoscomp"><span class="glyphicon glyphicon-list"></span> Despesas X Prd.</a></li>
 							<li role="separator" class="divider"></li>
 							<li><a href="<?php echo base_url() ?>relatorio/devolucao1"><span class="glyphicon glyphicon-list"></span> Devoluções</a></li>
 							<li role="separator" class="divider"></li>
