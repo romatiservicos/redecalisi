@@ -61,6 +61,16 @@ class Funcionario extends CI_Controller {
 			'Permissao',
 			'Funcao',
 			'Inativo',
+			'CpfUsuario',
+			'RgUsuario',
+			'OrgaoExpUsuario',
+			'EstadoEmUsuario',
+			'DataEmUsuario',
+			'EnderecoUsuario',
+			'BairroUsuario',
+			'MunicipioUsuario',
+			'EstadoUsuario',
+			'CepUsuario',
 
         ), TRUE));
 
@@ -155,6 +165,16 @@ class Funcionario extends CI_Controller {
 			'Permissao',
 			'Funcao',
 			'Inativo',
+			'CpfUsuario',
+			'RgUsuario',
+			'OrgaoExpUsuario',
+			'EstadoEmUsuario',
+			'DataEmUsuario',
+			'EnderecoUsuario',
+			'BairroUsuario',
+			'MunicipioUsuario',
+			'EstadoUsuario',
+			'CepUsuario',
 
         ), TRUE);
 
@@ -340,6 +360,7 @@ class Funcionario extends CI_Controller {
 		#$data['query']['Funcionario'] = $data['query']['Funcionario'];
 
         $data['query']['Telefone'] = $data['query']['Celular'];
+		$data['query']['CpfUsuario'] = $data['query']['CpfUsuario'];
 
         $data['contatofuncionario'] = $this->Funcionario_model->lista_contatofuncionario($id, TRUE);
         /*

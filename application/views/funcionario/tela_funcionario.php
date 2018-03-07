@@ -117,6 +117,28 @@
 											';
 
 											}
+											
+											if ($query['CpfUsuario']) {
+
+											echo '
+											<tr>
+												<td><span class="glyphicon glyphicon-envelope"></span> E-mail:</td>
+												<td>' . $query['CpfUsuario'] . '</td>
+											</tr>
+											';
+
+											}
+											
+											if ($query['RgUsuario']) {
+
+											echo '
+											<tr>
+												<td><span class="glyphicon glyphicon-envelope"></span> E-mail:</td>
+												<td>' . $query['RgUsuario'] . '</td>
+											</tr>
+											';
+
+											}
 
 
 											if ($query['Permissao']) {
