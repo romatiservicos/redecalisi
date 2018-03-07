@@ -161,7 +161,7 @@
 											echo '                                                 
 											<tr>
 												<td><span class="glyphicon glyphicon-home"></span> Endereço:</td>
-												<td>' . $query['Endereco'] . ' - ' . $query['Bairro'] . ' - ' . $query['Municipio'] . '</td>
+												<td>' . $query['Endereco'] . ' - ' . $query['Bairro'] . ' - ' . $query['Municipio'] . ' - ' . $query['Estado'] . '</td>
 											</tr>
 											';
 											
@@ -194,7 +194,7 @@
 											echo '                                                 
 											<tr>
 												<td><span class="glyphicon glyphicon-pencil"></span> Rg:</td>
-												<td>' . $query['Rg'] . ' - ' . $query['OrgaoExp'] . ' - ' . $query['Estado'] . ' - ' . $query['DataEmissao'] . '</td>
+												<td>' . $query['Rg'] . ' - ' . $query['OrgaoExp'] . ' - ' . $query['EstadoExp'] . ' - ' . $query['DataEmissao'] . '</td>
 											</tr>
 											';
 											
