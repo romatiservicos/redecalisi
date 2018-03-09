@@ -190,9 +190,13 @@ class Loginfuncionario extends CI_Controller {
         $this->form_validation->set_rules('DataNascimento', 'Data de Nascimento', 'trim|valid_date');
 		$this->form_validation->set_rules('Celular', 'Celular', 'required|trim');
 		
-		$this->form_validation->set_rules('CpfUsuario', 'Cpf', 'required|trim|valid_Cpf');
-		$this->form_validation->set_rules('RgUsuario', 'Rg', 'required|trim|valid_Rg');
-		$this->form_validation->set_rules('CepUsuario', 'Cep', 'required|trim|valid_Cep');
+		$this->form_validation->set_rules('CpfUsuario', 'Cpf', 'required|trim');
+		$this->form_validation->set_rules('RgUsuario', 'Rg', 'required|trim');
+		$this->form_validation->set_rules('EnderecoUsuario', 'Endereço', 'required|trim');
+		$this->form_validation->set_rules('BairroUsuario', 'Bairro', 'required|trim');
+		$this->form_validation->set_rules('MunicipioUsuario', 'Município', 'required|trim');
+		$this->form_validation->set_rules('EstadoUsuario', 'Estado', 'required|trim');
+		$this->form_validation->set_rules('CepUsuario', 'Cep', 'required|trim');
 		
 		
 		#$this->form_validation->set_rules('Permissao', 'Nível', 'required|trim');

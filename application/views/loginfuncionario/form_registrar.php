@@ -111,17 +111,17 @@
 	<br>	
 -->	
 	<label for="CpfUsuario">Cpf:</label>
-	<input type="text" class="form-control Cpf" id="CpfUsuario" maxlength="11"
+	<input type="text" class="form-control Cpf" id="Cpf" maxlength="11"
 		   name="CpfUsuario" placeholder="99999999999" value="<?php echo $query['CpfUsuario']; ?>">
 	<?php echo form_error('CpfUsuario'); ?>
 	<br>
 	
 	<label for="RgUsuario">Rg:</label>
-	<input type="text" class="form-control Rg" id="RgUsuario" maxlength="9"
+	<input type="text" class="form-control Rg" id="Rg" maxlength="9"
 		   name="RgUsuario" placeholder="999999999" value="<?php echo $query['RgUsuario']; ?>">
 	<?php echo form_error('RgUsuario'); ?>
 	<br>
-	
+<!--	
 	<label for="OrgaoExpUsuario">OrgaoExp:</label>
 	<input type="text" class="form-control" id="OrgaoExpUsuario" maxlength="10"
 		   name="OrgaoExpUsuario" value="<?php echo $query['OrgaoExpUsuario']; ?>">
@@ -139,7 +139,7 @@
 		   name="DataEmUsuario" placeholder="DD/MM/AAAA" value="<?php echo $query['DataEmUsuario']; ?>">
 	<?php echo form_error('DataEmUsuario'); ?>
 	<br>
-	
+-->	
 	<label for="EnderecoUsuario">Endereço:</label>
 	<input type="text" class="form-control"  maxlength="200"
 		   name="EnderecoUsuario" value="<?php echo $query['EnderecoUsuario']; ?>">
@@ -184,7 +184,7 @@
 	<br>
 	-->
 	<label for="CepUsuario">Cep:</label>
-	<input type="text" class="form-control Cep"  maxlength="8"
+	<input type="text" class="form-control Cep" id="Cep" maxlength="8"
 		   name="CepUsuario" placeholder="99999999" value="<?php echo $query['CepUsuario']; ?>">
 	<?php echo form_error('CepUsuario'); ?>
 	<br>
