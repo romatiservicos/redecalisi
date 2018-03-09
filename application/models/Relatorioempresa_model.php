@@ -3470,6 +3470,50 @@ exit();*/
 
     }
 
+	public function list_empresafilial($data, $completo) {
+
+        $data['Nome'] = ($data['Nome']) ? ' AND F.idSis_Usuario = ' . $data['Nome'] : FALSE;
+        $data['Campo'] = (!$data['Campo']) ? 'F.Nome' : $data['Campo'];
+        $data['Ordenamento'] = (!$data['Ordenamento']) ? 'ASC' : $data['Ordenamento'];
+
+        $query = $this->db->query('
+            SELECT
+                F.idSis_EmpresaFilial,
+                F.Nome
+            FROM
+                Sis_EmpresaFilial AS F
+
+            WHERE
+				F.idSis_EmpresaFilial = ' . $_SESSION['log']['id'] . ' 
+                ' . $data['Nome'] . '
+            ORDER BY
+                ' . $data['Campo'] . ' ' . $data['Ordenamento'] . '
+        ');
+
+        /*
+        #AND
+        #P.idApp_Profissional = OT.idApp_Cliente
+
+          echo $this->db->last_query();
+          echo "<pre>";
+          print_r($query);
+          echo "</pre>";
+          exit();
+        */
+
+        if ($completo === FALSE) {
+            return TRUE;
+        } else {
+
+            foreach ($query->result() as $row) {
+
+            }
+
+            return $query;
+        }
+
+    }
+	
 	public function list_empresas($data, $completo) {
 
 		$data['NomeEmpresa'] = ($data['NomeEmpresa']) ? ' AND E.idApp_Empresa = ' . $data['NomeEmpresa'] : FALSE;
@@ -4225,6 +4269,29 @@ exit();*/
         return $array;
     }
 
+    public function select_empresafilial() {
+
+        $query = $this->db->query('
+            SELECT
+                F.idSis_EmpresaFilial,
+                F.Nome
+            FROM
+                Sis_EmpresaFilial AS F
+            WHERE
+                F.idSis_EmpresaFilial = ' . $_SESSION['log']['id'] . '
+            ORDER BY
+                F.Nome ASC
+        ');
+
+        $array = array();
+        $array[0] = ':: Todos ::';
+        foreach ($query->result() as $row) {
+            $array[$row->idSis_EmpresaFilial] = $row->Nome;
+        }
+
+        return $array;
+    }
+		
 	public function select_profissional() {
 
         $query = $this->db->query('

@@ -41,7 +41,7 @@
 	<br>
 
 	<label for="DataNascimento">Data de Nascimento:</label>
-	<input type="text" class="form-control Date" id="inputDate0" maxlength="10"
+	<input type="text" class="form-control Date"  maxlength="10"
 		   name="DataNascimento" placeholder="DD/MM/AAAA" value="<?php echo $query['DataNascimento']; ?>">
 	<?php echo form_error('DataNascimento'); ?>
 	<br>
@@ -111,14 +111,14 @@
 	<br>	
 -->	
 	<label for="CpfUsuario">Cpf:</label>
-	<input type="text" class="form-control" id="CpfUsuario" maxlength="11"
-		   name="CpfUsuario" value="<?php echo $query['CpfUsuario']; ?>">
+	<input type="text" class="form-control Cpf" id="CpfUsuario" maxlength="11"
+		   name="CpfUsuario" placeholder="99999999999" value="<?php echo $query['CpfUsuario']; ?>">
 	<?php echo form_error('CpfUsuario'); ?>
 	<br>
 	
 	<label for="RgUsuario">Rg:</label>
-	<input type="text" class="form-control" id="RgUsuario" maxlength="9"
-		   name="RgUsuario" value="<?php echo $query['RgUsuario']; ?>">
+	<input type="text" class="form-control Rg" id="RgUsuario" maxlength="9"
+		   name="RgUsuario" placeholder="999999999" value="<?php echo $query['RgUsuario']; ?>">
 	<?php echo form_error('RgUsuario'); ?>
 	<br>
 	
@@ -135,32 +135,32 @@
 	<br>
 	
 	<label for="DataEmUsuario">Data de Emissão:</label>
-	<input type="text" class="form-control Date" id="inputDate0" maxlength="10"
+	<input type="text" class="form-control Date"  maxlength="10"
 		   name="DataEmUsuario" placeholder="DD/MM/AAAA" value="<?php echo $query['DataEmUsuario']; ?>">
 	<?php echo form_error('DataEmUsuario'); ?>
 	<br>
 	
 	<label for="EnderecoUsuario">Endereço:</label>
-	<input type="text" class="form-control" id="EnderecoUsuario" maxlength="200"
+	<input type="text" class="form-control"  maxlength="200"
 		   name="EnderecoUsuario" value="<?php echo $query['EnderecoUsuario']; ?>">
 	<?php echo form_error('EnderecoUsuario'); ?>
 	<br>
 	
 	<label for="BairroUsuario">Bairro:</label>
-	<input type="text" class="form-control" id="BairroUsuario" maxlength="50"
+	<input type="text" class="form-control"  maxlength="50"
 		   name="BairroUsuario" value="<?php echo $query['BairroUsuario']; ?>">
 	<?php echo form_error('BairroUsuario'); ?>
 	<br>
 	
 	
 	<label for="MunicipioUsuario">Municipio:</label>
-	<input type="text" class="form-control" id="MunicipioUsuario" maxlength="100"
+	<input type="text" class="form-control" maxlength="100"
 		   name="MunicipioUsuario" value="<?php echo $query['MunicipioUsuario']; ?>">
 	<?php echo form_error('MunicipioUsuario'); ?>
 	<br>
 	
 	<label for="EstadoUsuario">Estado:</label>
-	<input type="text" class="form-control" id="EstadoUsuario" maxlength="2"
+	<input type="text" class="form-control"  maxlength="2"
 		   name="EstadoUsuario" value="<?php echo $query['EstadoUsuario']; ?>">
 	<?php echo form_error('EstadoUsuario'); ?>
 	<br>
@@ -184,8 +184,8 @@
 	<br>
 	-->
 	<label for="CepUsuario">Cep:</label>
-	<input type="text" class="form-control" id="CepUsuario" maxlength="8"
-		   name="CepUsuario" value="<?php echo $query['CepUsuario']; ?>">
+	<input type="text" class="form-control Cep"  maxlength="8"
+		   name="CepUsuario" placeholder="99999999" value="<?php echo $query['CepUsuario']; ?>">
 	<?php echo form_error('CepUsuario'); ?>
 	<br>
 	

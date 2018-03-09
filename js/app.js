@@ -1582,9 +1582,11 @@ $("#first-choice").change(function () {
 $(document).ready(function () {
 
     $(".Date").mask("99/99/9999");
+	$(".Cnpj").mask("99.999.999/9999-99");
     $(".Time").mask("99:99");
-    $(".Cpf").mask("999.999.999-99");
-    $(".Cep").mask("99999-999");
+    $(".Cpf").mask("99999999999");
+    $(".Cep").mask("99999999");
+	$(".Rg").mask("999999999");
     $(".TituloEleitor").mask("9999.9999.9999");
     $(".Valor").mask("#.##0,00", {reverse: true});
     $('.Numero').mask('0#');
