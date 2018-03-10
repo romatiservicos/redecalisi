@@ -34,7 +34,7 @@
 	<?php echo form_error('Nome'); ?>
 	<br>
 	
-	<label for="Celular">Celular:</label>
+	<label for="Celular">Celular: (Digite apenas números)</label>
 	<input type="text" class="form-control Celular Celular" id="Celular" maxlength="11"
 		   name="Celular" placeholder="(XX)999999999" value="<?php echo $query['Celular']; ?>">
 	<?php echo form_error('Celular'); ?>
@@ -110,13 +110,13 @@
 	<?php echo form_error('Permissao'); ?>
 	<br>	
 -->	
-	<label for="CpfUsuario">Cpf:</label>
+	<label for="CpfUsuario">Cpf: (Digite apenas números)</label>
 	<input type="text" class="form-control Cpf" id="Cpf" maxlength="11"
 		   name="CpfUsuario" placeholder="99999999999" value="<?php echo $query['CpfUsuario']; ?>">
 	<?php echo form_error('CpfUsuario'); ?>
 	<br>
 	
-	<label for="RgUsuario">Rg:</label>
+	<label for="RgUsuario">Rg: (Digite apenas números)</label>
 	<input type="text" class="form-control Rg" id="Rg" maxlength="9"
 		   name="RgUsuario" placeholder="999999999" value="<?php echo $query['RgUsuario']; ?>">
 	<?php echo form_error('RgUsuario'); ?>
@@ -183,7 +183,7 @@
 	<?php echo form_error('Municipio'); ?>
 	<br>
 	-->
-	<label for="CepUsuario">Cep:</label>
+	<label for="CepUsuario">Cep: (Digite apenas números)</label>
 	<input type="text" class="form-control Cep" id="Cep" maxlength="8"
 		   name="CepUsuario" placeholder="99999999" value="<?php echo $query['CepUsuario']; ?>">
 	<?php echo form_error('CepUsuario'); ?>
@@ -201,7 +201,7 @@
 	<?php echo form_error('Usuario'); ?>
 	<br>
 
-	<label for="Senha">Senha:</label>
+	<label for="Senha">Senha: (Misture Letras e Números)</label>
 	<input type="password" class="form-control" id="Senha" maxlength="45"
 		   name="Senha" value="<?php echo $query['Senha']; ?>">
 	<?php echo form_error('Senha'); ?>
